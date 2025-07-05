@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net45;net46;net472</TargetFrameworks>
+    <TargetFramework>net9.0</TargetFramework>
     <Authors>Whistyun</Authors>
     <Company>Whistyun</Company>
     <Copyright>Copyright (c) 2019 whistyun</Copyright>
@@ -10,25 +10,13 @@ Classes and Methods are somewhat similar to the Microsoft Office Excel model.</D
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/whistyun/UnoSharp.git</RepositoryUrl>
+    <LibreOfficeProgramDir Condition="'$(LibreOfficeProgramDir)'==''">/usr/lib/libreoffice/program</LibreOfficeProgramDir>
   </PropertyGroup>
 
   <ItemGroup>
-    <Reference Include="cli_basetypes">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\LibreOffice\sdk\cli\cli_basetypes.dll</HintPath>
-    </Reference>
-    <Reference Include="cli_cppuhelper">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\LibreOffice\sdk\cli\cli_cppuhelper.dll</HintPath>
-    </Reference>
-    <Reference Include="cli_oootypes">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\LibreOffice\sdk\cli\cli_oootypes.dll</HintPath>
-    </Reference>
-    <Reference Include="cli_ure">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\LibreOffice\sdk\cli\cli_ure.dll</HintPath>
-    </Reference>
-    <Reference Include="cli_uretypes">
-      <HintPath>..\..\..\..\..\..\Program Files (x86)\LibreOffice\sdk\cli\cli_uretypes.dll</HintPath>
-    </Reference>
+    <PackageReference Include="LibreOffice.Bindings" Version="*" />
   </ItemGroup>
+
 
   <ItemGroup>
     <None Include="..\LICENSE">
