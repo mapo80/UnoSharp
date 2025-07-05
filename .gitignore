@@ -11,3 +11,4 @@ ipch/
 *.userosscache
 *.sln.docstates
 *.sdf
+UnoSharp/lib/

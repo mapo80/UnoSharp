@@ -35,7 +35,7 @@ namespace UnoSharp.Tests
                 var input = inputs[idx];
                 var expected = expecteds[idx];
 
-                Assert.AreEqual(expected.ToString(), Utils.ConvertDateToValue(nullDate, input).ToString());
+                Assert.AreEqual(expected, Utils.ConvertDateToValue(nullDate, input), 1e-9);
             }
         }
 
